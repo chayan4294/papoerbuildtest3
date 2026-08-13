@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout | PaperBuild</title>
+  <meta name="description" content="UPI checkout flow for PaperBuild digital papercraft PDF templates.">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="site-header"><nav class="container nav" aria-label="Main navigation"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span>PaperBuild</a><button class="mobile-toggle" type="button" aria-label="Open navigation" aria-expanded="false">&#9776;</button><div class="nav-links"><a href="/">Home</a><a href="/free-templates/">Free Templates</a><a href="/shop/">Shop</a><a href="/about/">About</a><a href="/contact/">Contact</a></div></nav></header>
+  <main>
+    <section class="page-hero"><div class="container"><span class="eyebrow">UPI checkout</span><h1>Pay with UPI</h1><p>Customer email is collected for order confirmation and secure download delivery after payment verification.</p></div></section>
+    <section class="section">
+      <div class="container checkout-grid">
+        <form class="form-panel form-grid" data-checkout data-product="cat" data-amount="99">
+          <h2>Pay with UPI</h2>
+          <label>Email address <input class="input" type="email" name="email" autocomplete="email" required></label>
+          <label>Name <input class="input" type="text" name="name" autocomplete="name" required></label>
+          <label>UPI ID <span class="field-note">Optional if paying with QR or app</span><input class="input" type="text" name="upiId" placeholder="name@bank"></label>
+          <div class="upi-options" aria-label="Supported UPI options">
+            <span class="pill">UPI ID</span>
+            <span class="pill">Google Pay</span>
+            <span class="pill">PhonePe</span>
+            <span class="pill">Paytm</span>
+            <span class="pill">BHIM</span>
+            <span class="pill">Other UPI apps</span>
+          </div>
+          <label class="checkbox"><input type="checkbox" name="terms" required> I understand this is a digital PDF product delivered only after verified UPI payment.</label>
+          <button class="btn btn-primary" type="submit">Create UPI Payment</button>
+          <p class="field-note">Paid downloads stay locked until the payment gateway confirms the UPI transaction.</p>
+          <div class="upi-payment" data-upi-panel hidden>
+            <div class="qr-card" aria-label="UPI QR code">
+              <img class="upi-qr-image" data-upi-qr alt="UPI QR code for PaperBuild payment">
+              <strong>Scan UPI QR</strong>
+            </div>
+            <div>
+              <h3>Complete payment</h3>
+              <p class="field-note">Use the QR code or open a UPI app payment flow. PaperBuild verifies the payment before showing downloads.</p>
+              <div class="actions">
+                <a class="btn btn-primary" data-upi-intent href="#">Open UPI App</a>
+                <button class="btn btn-secondary" type="button" data-check-payment>Check Payment Status</button>
+              </div>
+              <p class="payment-status" data-payment-status>Waiting for verified payment.</p>
+            </div>
+          </div>
+        </form>
+        <aside class="included">
+          <h2>Cute Cat Pack</h2>
+          <p>Three printable cat models with guide and bonus display card.</p>
+          <div class="summary-line"><span>Template pack</span><strong>&#8377;99</strong></div>
+          <div class="summary-line"><span>Payment</span><strong>UPI only</strong></div>
+          <div class="summary-line"><span>Merchant UPI</span><strong>chayan58@fam</strong></div>
+          <div class="summary-line"><span>Delivery</span><strong>After verification</strong></div>
+          <div class="summary-line"><span>Total</span><strong>&#8377;99</strong></div>
+          <ul>
+            <li>Printable PDF template</li>
+            <li>Step-by-step Build Guide</li>
+            <li>Bonus display files when available</li>
+            <li>UPI QR code and UPI app payment flow</li>
+            <li>Download access after verified payment</li>
+            <li>Download link sent to customer email</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><span>&copy; 2026 PaperBuild.</span><div class="socials"><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a><a href="https://youtube.com/" target="_blank" rel="noopener">YouTube</a></div></div></footer>
+  <script src="/assets/app.js"></script>
+</body>
+</html>
